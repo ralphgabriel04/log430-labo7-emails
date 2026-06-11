@@ -1,8 +1,15 @@
 # Rapport — Labo 07 : Architecture Event-Driven, Event Sourcing et Pub/Sub
 
-**Cours :** LOG430 — Architecture logicielle
-**Auteur :** Ralph Christian Gabriel
-**Session :** Automne 2025
+**LOG430-02 — Architecture logicielle, École de technologie supérieure (ÉTS)**
+
+| | |
+|---|---|
+| **Chargé de laboratoire** | Gabriel C. Ullmann |
+| **Étudiant** | Ralph Christian Gabriel |
+| **Code permanent** | GABR77340401 |
+| **Session** | Été 2026 |
+| **Application** | Store Manager (suite du Labo 03) |
+| **Date des mesures** | 2026-06-10 |
 
 ---
 
