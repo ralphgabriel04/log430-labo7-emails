@@ -30,5 +30,5 @@ def test_user_deleted_handler():
         "datetime": str(datetime.now())
     }
     user_deletion.handle(mock_event)
-    file_exists = exists("output/welcome_999.html")
+    file_exists = exists("output/goodbye_999.html")
     assert file_exists == True

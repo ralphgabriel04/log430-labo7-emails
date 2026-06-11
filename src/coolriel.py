@@ -19,6 +19,20 @@ def main():
     registry.register(UserCreatedHandler(output_dir=config.OUTPUT_DIR))
     registry.register(UserDeletedHandler(output_dir=config.OUTPUT_DIR))
 
+    # 1) Event sourcing: lire d'abord TOUT l'historique des événements (earliest).
+    # group_id distinct + consumer_timeout_ms => ce consommateur se termine,
+    # puis l'exécution continue vers le consommateur "live".
+    consumer_service_history = UserEventHistoryConsumer(
+        bootstrap_servers=config.KAFKA_HOST,
+        topic=config.KAFKA_TOPIC,
+        group_id=f"{config.KAFKA_GROUP_ID}-history",
+        output_dir=config.OUTPUT_DIR,
+        consumer_timeout_ms=5000,
+    )
+    history = consumer_service_history.start()
+    logger.info(f"Historique terminé : {len(history)} événement(s) récupéré(s).")
+
+    # 2) Consommateur "live": écoute les nouveaux événements (latest).
     # NOTE: le consommateur peut écouter 1 ou plusieurs topics (str or array)
     consumer_service = UserEventConsumer(
         bootstrap_servers=config.KAFKA_HOST,

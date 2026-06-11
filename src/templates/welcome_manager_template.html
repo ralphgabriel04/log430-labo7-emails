@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue à la direction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #c79081 0%, #dfa579 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 {
+            color: #b8860b;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .user-id {
+            color: #999;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗝️ Bienvenue à la direction, {{name}} !</h1>
+        <p>Félicitations pour votre nomination comme directeur·rice du Magasin du Coin. Vous avez maintenant accès à la gestion de l'équipe et des opérations du magasin.</p>
+        <p>Cordialement,</p>
+        <p>Magasin du Coin</p>
+        <p class="user-id">Votre ID Utilisateur: {{user_id}}</p>
+        <p class="user-id">Votre adresse courriel: {{email}}</p>
+        <p class="user-id">Crée à {{creation_date}}</p>
+    </div>
+</body>
+</html>

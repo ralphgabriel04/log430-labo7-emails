@@ -22,6 +22,10 @@ services:
       KAFKA_JMX_PORT: 9101
       KAFKA_JMX_HOSTNAME: kafka
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      # Event sourcing: conserver les messages sur le disque
+      KAFKA_LOG_RETENTION_HOURS: 168 # Garde les messages 7 jours
+      KAFKA_LOG_RETENTION_BYTES: 1073741824 # Taille des partitions : 1GB
+      KAFKA_LOG_SEGMENT_BYTES: 214748364 # Taille des log segments : 200MB
     healthcheck:
       test: kafka-broker-api-versions --bootstrap-server kafka:9092 || exit 1
       interval: 10s

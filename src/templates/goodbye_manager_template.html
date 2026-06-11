@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Au revoir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #c79081 0%, #dfa579 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 {
+            color: #b8860b;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .user-id {
+            color: #999;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗝️ Au revoir, {{name}}</h1>
+        <p>Merci pour votre leadership à la direction du Magasin du Coin. Votre contribution à la gestion du magasin a été précieuse. Nous vous souhaitons le meilleur pour vos prochains projets.</p>
+        <p>Cordialement,</p>
+        <p>Magasin du Coin</p>
+        <p class="user-id">Votre ID Utilisateur: {{user_id}}</p>
+        <p class="user-id">Votre adresse courriel: {{email}}</p>
+        <p class="user-id">Supprimé à {{deletion_date}}</p>
+    </div>
+</body>
+</html>
